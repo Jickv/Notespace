@@ -1,0 +1,36 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Notespace</title>
+    <link href="{% static 'savetext/style.css' %}" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  </head>
+
+  <body id="body_id">
+
+<div>
+
+<div class="container">
+	<div class="flipper">
+		<div class="front">
+			<p>notespace lets you write on cards</p>
+		</div>
+		<div class="back">
+			<p>and save them to a personal library</p>
+		</div>
+	</div>
+</div>
+
+<div class="buttonwrap">
+
+<button id="buttonid">next</button>
+
+</div>
+</div>
+
+    <script src="{% static 'savetext/script.js' %}"></script>
+  </body>
+</html>
