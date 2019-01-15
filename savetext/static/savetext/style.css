@@ -36,13 +36,12 @@ body {
   
   /* BUTTON */
   
-  
   .buttonwrap {
     position: relative;
-    top: 200px;
+    top: 300px;
     z-index: 90;
   }
-  
+
   button {
     font-family: Roboto;
     font-size: 28px;

@@ -14,10 +14,15 @@
   <form method="POST" action="">
     {% csrf_token %}
     {{ form }}
-    <input type="text" name="text">
     <input type="submit" name="submit">
   </form>
 
-    <script src="{% static 'savetext/script.js' %}"></script>
+  <div class="buttonwrap">
+
+  <button id="backbutton">back</button>
+  
+  </div>
+
+    <script src="{% static 'savetext/script3.js' %}"></script>
   </body>
 </html>

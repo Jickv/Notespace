@@ -1,7 +1,8 @@
 from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import render, render_to_response, redirect
 from django.template.loader import get_template
-from .forms import NoteForm
+from savetext.forms import NoteForm
+from savetext.models import Note
 from django.template import RequestContext
 
 def index(request):
@@ -11,15 +12,15 @@ def library(request):
     return render(request, 'library.html', {})
 
 def notezoom(request):
-    form = NoteForm(request.POST)
-    return render(request, 'notezoom.html', {'form': form})
+        form = NoteForm(request.POST) 
+        if request.method == 'POST':
 
-def add_note(request):
-    if request.method == 'POST':
-        form = NoteForm(request.POST)
+            form = NoteForm(request.POST)
         if form.is_valid():
-            note_item = form.save(commit=False)
-            note_item.save()
-            return render(request, 'notezoom.html', {'form': form})             
+            form.save()
+
+            return render(request, 'notezoom.html', {'form': form})            
         else:
+            form = NoteForm(request.POST)
+
             return render(request, 'notezoom.html', {'form': form})

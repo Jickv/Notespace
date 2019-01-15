@@ -4,4 +4,5 @@ from savetext.models import Note
 class NoteForm(ModelForm):
     class Meta:
         model = Note
-        fields = ['content']
+        fields = ['mod']
+
