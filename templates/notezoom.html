@@ -11,11 +11,20 @@
 
   <body>
 
+<div class="container2">
+  <div class="flipper">
+    <div class="front">
   <form method="POST" action="">
     {% csrf_token %}
     {{ form }}
     <input type="submit" name="submit">
-  </form>
+    </form>
+  </div>
+  <div class="back">
+    </div>
+  </div>
+</div>
+  
 
   <div class="buttonwrap">
 
