@@ -86,8 +86,10 @@ body {
           transform: rotateX(180deg);
   }
   
+/* */
+
   .container .flipper {
-          transform-origin: 100% 200px; /* half of height */
+          transform-origin: 100% 200px;
   }
   
   .container:hover .flipper {
@@ -113,6 +115,8 @@ body {
       position: relative;
   }
   
+/* */
+
   .front, .back {
       backface-visibility: hidden;
       position: absolute;
